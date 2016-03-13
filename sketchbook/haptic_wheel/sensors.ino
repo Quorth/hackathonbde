@@ -80,10 +80,10 @@ void update_direction(){
 
 void direction_level_notify(int direction_level){
   if(direction_level > 120){
-    imprimir_mensaje(4);
+    imprimir_mensaje(5);
   }
   else{
-    imprimir_mensaje(5);
+    imprimir_mensaje(4);
   }
   direction_level_feedback(direction_level);
 }

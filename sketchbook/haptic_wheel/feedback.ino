@@ -55,15 +55,15 @@ void fuel_level_feedback(){
    int power;
    if(direction_level > 120){
      power = map(direction_level,120,180,150,PWM_LEVEL_HIGH);
-     analogWrite(PIN_RIGHT_ENGINE,power);
-     delay(2000);
-     analogWrite(PIN_RIGHT_ENGINE,0);
-   }
-   else{
-     power = map(direction_level,60,0,150,PWM_LEVEL_HIGH);
      analogWrite(PIN_LEFT_ENGINE,power);
      delay(2000);
      analogWrite(PIN_LEFT_ENGINE,0);
+   }
+   else{
+     power = map(direction_level,60,0,150,PWM_LEVEL_HIGH);
+     analogWrite(PIN_RIGHT_ENGINE,power);
+     delay(2000);
+     analogWrite(PIN_RIGHT_ENGINE,0);
    }
    
  }
